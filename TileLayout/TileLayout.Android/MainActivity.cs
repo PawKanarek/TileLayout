@@ -16,7 +16,10 @@ namespace TileLayout.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+            Print.CustomWriteLine = (sender, message) =>
+            {
+                Log.Debug("log|", $"{sender.GetType().Name,-25}{sender.GetHashCode(),-11}|{Xamarin.Essentials.MainThread.IsMainThread,-6}|: {message}");
+            };
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);

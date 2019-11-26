@@ -25,10 +25,7 @@ namespace TileLayout
             tileLayout.Title = new Label() { Text =  "title"};
             tileLayout.Description = new Label() { Text = "Description" };
 
-            tileLayout.Children.Add(new BoxView() { Color = Color.Yellow }); // To start invalidating
             this.Content = tileLayout;
-
-            tileLayout.InvalidateTile();
         }
     }
 }
